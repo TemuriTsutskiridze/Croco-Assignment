@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class UserDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private dataService: DataService
   ) {}
 
@@ -24,5 +25,10 @@ export class UserDetailsComponent implements OnInit {
         this.user = user;
       });
     });
+  }
+
+  navigateToUserPosts(): void {
+    const userId = this.user.id; // Get the user's ID
+    this.router.navigate(['user', userId, 'posts']); // Navigate to the user's posts page
   }
 }

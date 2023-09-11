@@ -8,14 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { UserPostsComponent } from './components/user-posts/user-posts.component';
 
 const routes: Routes = [
   { path: '', component: UserListComponent },
   { path: 'user/:id', component: UserDetailsComponent },
+  { path: 'user/:id/posts', component: UserPostsComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, UserListComponent, UserDetailsComponent],
+  declarations: [
+    AppComponent,
+    UserListComponent,
+    UserDetailsComponent,
+    UserPostsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
