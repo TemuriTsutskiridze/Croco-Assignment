@@ -1,23 +1,29 @@
-<h2>Users</h2>
-<table *ngIf="users.length > 0">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
-      <td>
-        <a [routerLink]="['/user', user.id]">
-          <button class="details-button" (click)="showDetails(user)">
-            Details
-          </button>
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <h1 class="title">Users</h1>
+  <p class="description">
+    This is the start of the paragraph.
+    <span class="bold">This is middle.</span> This is the end of the paragraph
+  </p>
+  <table *ngIf="users.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <a [routerLink]="['/user', user.id]">
+            <button class="details-button" (click)="showDetails(user)">
+              Details
+            </button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

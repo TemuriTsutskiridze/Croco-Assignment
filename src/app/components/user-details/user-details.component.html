@@ -1,7 +1,9 @@
-<h2>User Details</h2>
-<div *ngIf="user">
-  <p>Name: {{ user.name }}</p>
-  <p>Email: {{ user.email }}</p>
+<div class="childContainer">
+  <h2>User Details</h2>
+  <div *ngIf="user" class="child">
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
 
-  <button (click)="navigateToUserPosts()">User Posts</button>
+    <button (click)="navigateToUserPosts()">User Posts</button>
+  </div>
 </div>
