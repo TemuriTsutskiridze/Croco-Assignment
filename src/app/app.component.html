@@ -1,1 +1,9 @@
-<app-user-list></app-user-list>
+<!-- app.component.html -->
+
+<div class="container">
+  <router-outlet></router-outlet>
+
+  <router-outlet name="userList"></router-outlet>
+
+  <router-outlet name="userDetails"></router-outlet>
+</div>

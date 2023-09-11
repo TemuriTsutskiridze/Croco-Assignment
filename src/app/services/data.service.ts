@@ -15,4 +15,9 @@ export class DataService {
   getPosts(): Observable<any[]> {
     return this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts');
   }
+
+  getUser(userId: number): Observable<any> {
+    const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+    return this.http.get<any>(url);
+  }
 }
