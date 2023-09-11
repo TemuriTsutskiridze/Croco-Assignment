@@ -23,7 +23,6 @@ export class UserListComponent implements OnInit {
   }
 
   showDetails(user: any): void {
-    // Implement the logic to show user details here (e.g., navigate to a user details page).
     console.log('User Details:', user);
   }
 }

@@ -7,22 +7,23 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
   constructor(private http: HttpClient) {}
+  private baseURL: string = 'https://jsonplaceholder.typicode.com';
 
   getUsers(): Observable<any[]> {
-    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/users');
+    return this.http.get<any[]>(`${this.baseURL}/users`);
   }
 
   getPosts(): Observable<any[]> {
-    return this.http.get<any[]>('https://jsonplaceholder.typicode.com/posts');
+    return this.http.get<any[]>(`${this.baseURL}/posts`);
   }
 
   getUser(userId: number): Observable<any> {
-    const url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+    const url = `${this.baseURL}/users/${userId}`;
     return this.http.get<any>(url);
   }
 
   getPostsByUser(userId: number): Observable<any[]> {
-    const url = `https://jsonplaceholder.typicode.com/posts?userId=${userId}`;
+    const url = `${this.baseURL}/posts?userId=${userId}`;
     return this.http.get<any[]>(url);
   }
 }

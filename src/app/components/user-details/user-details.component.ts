@@ -19,16 +19,16 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const userId = params['id'];
-      console.log('User ID:', userId); // Log the user ID
+      console.log('User ID:', userId);
       this.dataService.getUser(userId).subscribe((user) => {
-        console.log('User Data:', user); // Log the user data
+        console.log('User Data:', user);
         this.user = user;
       });
     });
   }
 
   navigateToUserPosts(): void {
-    const userId = this.user.id; // Get the user's ID
-    this.router.navigate(['user', userId, 'posts']); // Navigate to the user's posts page
+    const userId = this.user.id;
+    this.router.navigate(['user', userId, 'posts']);
   }
 }
