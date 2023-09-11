@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { UserPostsComponent } from './components/user-posts/user-posts.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
 
 const routes: Routes = [
   { path: '', component: UserListComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
     UserListComponent,
     UserDetailsComponent,
     UserPostsComponent,
+    PostCardComponent,
   ],
   imports: [
     BrowserModule,
